@@ -15,14 +15,20 @@ class Snake:
         self.head = self.parts[0]
 
     def create(self):
-        INITIAL_X = 0
+        initial_x = 0
         for _ in range(INITIAL_COUNT):
-            part = Turtle(shape="square")
-            part.color("white")
-            part.penup()
-            part.setposition(INITIAL_X, 0)
-            INITIAL_X -= 20
-            self.parts.append(part)
+            self.add_part(initial_x)
+            initial_x -= 20
+
+    def add_part(self, x):
+        part = Turtle(shape="square")
+        part.color("white")
+        part.penup()
+        part.setposition(x, 0)
+        self.parts.append(part)
+
+    def extend(self):
+        self.add_part(self.parts[-1].xcor())
 
     def move(self):
         for i in range(len(self.parts) - 1, 0, -1):
