@@ -15,10 +15,8 @@ def get_coordinates(guess):
   return x , y
 
 def generate_states(found, states):
-  for state in states:
-    if state in found:
-      states.remove(state)
-  missing_states = pandas.DataFrame(states)
+  missing_states_list = [state for state in states if state not in found]
+  missing_states = pandas.DataFrame(missing_states_list)
   missing_states.to_csv(r"Python\100 Days of Code\us-states-game-start\missing_states.csv")
 
 def main():
