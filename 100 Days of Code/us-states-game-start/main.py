@@ -1,9 +1,9 @@
 import turtle
 import pandas
 
-data = pandas.read_csv(r"Python\100 Days of Code\us-states-game-start\50_states.csv")
+data = pandas.read_csv("50_states.csv")
 
-image = r"Python\100 Days of Code\us-states-game-start\blank_states_img.gif"
+image = "blank_states_img.gif"
 screen = turtle.Screen()
 screen.title("U.S. States Game")
 screen.bgpic(image)
@@ -17,7 +17,7 @@ def get_coordinates(guess):
 def generate_states(found, states):
   missing_states_list = [state for state in states if state not in found]
   missing_states = pandas.DataFrame(missing_states_list)
-  missing_states.to_csv(r"Python\100 Days of Code\us-states-game-start\missing_states.csv")
+  missing_states.to_csv("missing_states.csv")
 
 def main():
   end_game = False

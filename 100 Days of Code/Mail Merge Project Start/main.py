@@ -10,17 +10,17 @@
 def main():
     guests = []
 
-    with open(r"Python\100 Days of Code\Mail Merge Project Start\Input\Names\invited_names.txt", "r") as names:
+    with open(r"Input\Names\invited_names.txt", "r") as names:
         for name in names.readlines():
             name = name.strip()
             guests.append(name)
 
-    with open(r"Python\100 Days of Code\Mail Merge Project Start\Input\Letters\starting_letter.txt", "r") as template:
+    with open(r"Input\Letters\starting_letter.txt", "r") as template:
         text = template.read()
     
     for guest in guests:
         new_letter = text.replace("[name]", guest)
-        with open(fr"Python\100 Days of Code\Mail Merge Project Start\Output\ReadyToSend\{guest}_letter.txt", "w") as final_letter:
+        with open(fr"Output\ReadyToSend\{guest}_letter.txt", "w") as final_letter:
             final_letter.write(new_letter)
 
 main()

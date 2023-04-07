@@ -23,7 +23,7 @@ for (index, row) in student_data_frame.iterrows():
 
 #TODO 1. Create a dictionary in this format:
 
-nato_df = pandas.read_csv(r"Python\100 Days of Code\NATO-alphabet-start\nato_phonetic_alphabet.csv")
+nato_df = pandas.read_csv("nato_phonetic_alphabet.csv")
 
 nato_dict = {row.letter:row.code for index, row in nato_df.iterrows()}
 
