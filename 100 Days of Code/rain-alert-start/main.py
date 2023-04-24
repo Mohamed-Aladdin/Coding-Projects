@@ -2,7 +2,7 @@ import requests
 
 MY_LAT = 30.044420
 MY_LONG = 31.235712
-API_KEY = "7b194fbbfcefacc4bec7c9d6a16427fd"
+API_KEY = ""
 
 parameters = {
     "lat" : MY_LAT,
