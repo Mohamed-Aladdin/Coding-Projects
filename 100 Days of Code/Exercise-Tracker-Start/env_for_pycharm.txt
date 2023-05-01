@@ -1,0 +1,4 @@
+ENV_NIX_APP_ID=7b945557
+ENV_NIX_API_KEY=40bb2e8f95e694c2357be0e4d29a94d4
+ENV_SHEETY_ENDPOINT=https://api.sheety.co/Aladdinovic/workoutsTracking/workouts
+ENV_SHEETY_TOKEN=hkhkhkhkhkhkhkh
